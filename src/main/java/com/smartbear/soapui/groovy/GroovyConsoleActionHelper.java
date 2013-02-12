@@ -1,5 +1,6 @@
 package com.smartbear.soapui.groovy;
 
+import com.eviware.soapui.SoapUI;
 import com.eviware.soapui.model.ModelItem;
 import com.eviware.soapui.model.support.ModelSupport;
 import groovy.ui.Console;
@@ -21,9 +22,9 @@ public class GroovyConsoleActionHelper<T extends ModelItem> {
         Console console = consoleMap.get(modelItem);
 
         if (console == null || !console.getFrame().getContentPane().isDisplayable()) {
-            console = new Console();
-            console.setVariable(variableName, modelItem);
+            console = new Console(SoapUI.getSoapUICore().getExtensionClassLoader());
 
+            console.setVariable(variableName, modelItem);
             consoleMap.put(modelItem, console);
         }
 
@@ -35,6 +36,7 @@ public class GroovyConsoleActionHelper<T extends ModelItem> {
                 ((Frame) console.getFrame()).setTitle("SoapUI Groovy Console for [" + variableName + "]");
         }
     }
+
 
     public void removeConsole(ModelItem modelItem) {
         Console console = consoleMap.get(modelItem);
