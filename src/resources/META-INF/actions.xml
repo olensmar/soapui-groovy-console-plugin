@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:soapui-actions xmlns:tns="http://eviware.com/soapui/config">
+
+    <tns:action id="WorkspaceGroovyConsoleAction"
+                actionClass="com.smartbear.soapui.groovy.WorkspaceGroovyConsoleAction"/>
+    <tns:action id="ProjectGroovyConsoleAction" actionClass="com.smartbear.soapui.groovy.ProjectGroovyConsoleAction"/>
+    <tns:action id="TestSuiteGroovyConsoleAction"
+                actionClass="com.smartbear.soapui.groovy.TestSuiteGroovyConsoleAction"/>
+    <tns:action id="TestCaseGroovyConsoleAction" actionClass="com.smartbear.soapui.groovy.TestCaseGroovyConsoleAction"/>
+
+
+    <tns:actionGroup id="WorkspaceImplActions">
+        <tns:actionMapping actionId="WorkspaceGroovyConsoleAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="EnabledWsdlProjectActions">
+        <tns:actionMapping actionId="ProjectGroovyConsoleAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="WsdlTestSuiteActions">
+        <tns:actionMapping actionId="TestSuiteGroovyConsoleAction"/>
+    </tns:actionGroup>
+
+
+    <tns:actionGroup id="WsdlTestCaseActions">
+        <tns:actionMapping actionId="TestCaseGroovyConsoleAction"/>
+    </tns:actionGroup>
+
+
+</tns:soapui-actions>
