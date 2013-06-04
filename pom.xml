@@ -8,7 +8,7 @@
 
     <groupId>com.smartbear</groupId>
     <artifactId>soapui-groovy-console-plugin</artifactId>
-    <version>0.1-SNAPSHOT-plugin</version>
+    <version>1.0-plugin</version>
 
     <repositories>
         <repository>
