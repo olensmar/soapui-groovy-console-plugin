@@ -3,8 +3,10 @@ package com.smartbear.soapui.groovy;
 import com.eviware.soapui.impl.wsdl.WsdlProject;
 import com.eviware.soapui.model.project.Project;
 import com.eviware.soapui.model.support.WorkspaceListenerAdapter;
+import com.eviware.soapui.plugins.ActionConfiguration;
 import com.eviware.soapui.support.action.support.AbstractSoapUIAction;
 
+@ActionConfiguration(actionGroup = "EnabledWsdlProjectActions")
 public class ProjectGroovyConsoleAction extends AbstractSoapUIAction<WsdlProject> {
 
     GroovyConsoleActionHelper<Project> helper = new GroovyConsoleActionHelper<Project>("project");

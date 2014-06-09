@@ -7,8 +7,10 @@ import com.eviware.soapui.model.support.TestSuiteListenerAdapter;
 import com.eviware.soapui.model.support.WorkspaceListenerAdapter;
 import com.eviware.soapui.model.testsuite.TestCase;
 import com.eviware.soapui.model.testsuite.TestSuite;
+import com.eviware.soapui.plugins.ActionConfiguration;
 import com.eviware.soapui.support.action.support.AbstractSoapUIAction;
 
+@ActionConfiguration(actionGroup = "WsdlTestCaseActions")
 public class TestCaseGroovyConsoleAction extends AbstractSoapUIAction<WsdlTestCase> {
     private GroovyConsoleActionHelper<TestCase> helper = new GroovyConsoleActionHelper<TestCase>("testCase");
     private InternalProjectListener projectListener;

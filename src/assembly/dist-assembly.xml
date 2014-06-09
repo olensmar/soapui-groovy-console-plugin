@@ -1,0 +1,25 @@
+<assembly>
+    <id>dist</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <unpack>true</unpack>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>com.smartbear:soapui-groovy-console-plugin</include>
+            </includes>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>${project.basedir}</directory>
+            <outputDirectory>/META-INF</outputDirectory>
+            <includes>
+                <include>LICENSE*</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
